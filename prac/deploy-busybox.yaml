@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       type: test
-  replicas: 3
+  replicas: 2  
   template:
     metadata:
       name: busybox-test    
@@ -14,6 +14,7 @@ spec:
         type: test  
     spec:
       containers:
-      - command: ["sleep","3600"]
+      - command: ["sleep","1000"]
         image: busybox
         name: busybox-test  
+        restartPolicy: Never
