@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    tier: frontend
+    tier: db 
   name: nginx
 spec:
   containers:
