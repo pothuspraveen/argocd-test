@@ -17,4 +17,4 @@ spec:
       - command: ["sleep","1000"]
         image: busybox
         name: busybox-test  
-        restartPolicy: Never
+      restartPolicy: Never
