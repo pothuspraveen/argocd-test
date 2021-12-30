@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-1
+spec:
+  selector:
+    matchLabels:
+      type: test
+  replicas: 3
+  template:
+    metadata:
+      name: busybox-test    
+      labels: 
+        type: test  
+    spec:
+      containers:
+      - command: ["sleep","3600"]
+        image: busybox
+        name: busybox-test  
